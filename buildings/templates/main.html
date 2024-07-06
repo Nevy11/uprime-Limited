@@ -1,0 +1,387 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+
+    <link rel='icon' type='image/x-icon' href="{% static 'favicon.ico' %} " alt='Nothing'>
+    <title> Title </title>
+    
+    
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body style="background-color: lightgrey;">
+{% block content %}
+<div class="container bg-white" ><!-- style="margin-left: 8rem; margin-right: 8rem;" -->
+
+    <div class="clearfix">
+        <p class="float-end">
+                <a href="malto:info@gadrox.com" class="text-decoration-none text-dark" style="font: bold;">
+                <!--<i class="bi bi-envelope"></i>-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                    </svg> {{ email }}
+            </a>
+            </p>
+            <p class="float-end">
+                <a href="#" class="text-decoration-none text-dark" style="font: bold; margin-right: 16px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                      <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                      <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                    </svg>
+                {{ tel_no }}
+            </a>
+        </p>
+    </div>
+
+        <div class="input-group">
+
+                <img src="{% static 'logo.png' %}" alt="image unavailable" style="width:150px;" class="rounded-pill">
+
+
+            <h1 class="mx-auto my-5">
+                <a href="{% static 'uprime_profile.pdf' %}" class=" content text-decoration-none bg-warning text-white text-expand-sm"
+               style="width:180px; border-radius: 180px; margin-left: 4rem;">Business profile</a>
+
+            </h1>
+
+            <div class="p-3 my-5">
+
+                <a href="#home" class=" justify-content-right text-dark text-decoration-none p-3 my-5 "
+                >
+                    <b>
+                        HOME
+                    </b>
+                </a>
+
+
+
+                <a href="#about" class="justify-content-right text-dark text-decoration-none p-3 my-5"
+                   >
+                    <b>ABOUT</b>
+                </a>
+
+
+
+                <a href="#services" class="justify-content-right text-dark text-decoration-none p-3 my-5">
+                    <b>SERVICES</b>
+                </a>
+
+
+
+                <a href="#projects" class="justify-content-right text-dark text-decoration-none p-3 my-5">
+                    <b>PROJECTS</b>
+                </a>
+
+
+
+                <a href="#contact" class="justify-content-right text-dark text-decoration-none p-3 my-5" >
+                    <b>CONTACT</b>
+                </a>
+
+
+            </div>
+        </div>
+
+
+
+    <div class="carousel slide" id="demo" data-bs-ride="carousel">
+        <!-- the indicators/dots on the bottom -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide_to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide_to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide_to="2"></button>
+        </div>
+        <!-- slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'pool.jpeg' %}" alt="image unavailable" class="d-block w-100" height="500px;" width="500px;">
+                <div class="carousel-caption">
+                    <h3>construction</h3>
+                    <p>constructing and developing is something that we love doing</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'Untitled.jpeg' %}" alt="image unavailable" class="d-block w-100" height="500px;" width="500px;">
+                <div class="carousel-caption">
+                    <h3>construction</h3>
+                    <p>constructing and developing is something that we love doing</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'white_house.jpeg' %}" alt="image unavailable" class="d-block w-100" height="500px;" width="500px;">
+                <div class="carousel-caption">
+                    <h3>construction</h3>
+                    <p>constructing and developing is something that we love doing</p>
+                </div>
+            </div>
+        </div>
+        <!-- left/right controls -->
+        <button type="button" data-bs-target="#demo" data-bs-slide="prev" class="carousel-control-prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button type="button" data-bs-target="#demo" data-bs-slide="next" class="carousel-control-next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <div class="my-2 p-5">
+        <a href="#about" data-bs-toggle="collapse" class="text-dark text-decoration-none">
+            <div>
+                <h2 class="mx-auto " style="width: 260px;">ABOUT <mark class="text-warning bg-white">GODREX</mark></h2>
+                <hr class="hr_line bg-warning mx-auto" style="width: 260px; height: 16px;">
+            </div>
+            <div>
+                <p class="mx-auto my-1" style="width: 700px;"><b>Gadrox Limited is a dynamic company with a strong team of experienced professionals.</b></p>
+            </div>
+        </a>
+
+        <div class="collapse show" id="about">
+            <div class="row" style="margin-left:4rem; margin-right:4rem;">
+                <div class="col my-5">
+                    <div class="card" style="width: 300px; border:none;">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <b class="text-capitalize">our vision</b>
+                            </div>
+                            <div class="card-text">
+                                <p>
+                                    To be the leading provider of quality and affordable supplies across all industries,
+                                    delivering value to our customers through exceptional customer service, timely delivery,
+                                    and innvovative solutions that exceed their expectations.
+                                </p>
+
+
+                                <b class="text-capitalize pt-3">our mission</b>
+
+
+                                <p>
+                                    Our mission is to provide our customers with reliable and high-quality supplies,
+                                    ensuring their businesses operate smoothly and efficiently.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="col my-3 p-2">
+                    <div class="card bg-warning" style="border:none; width: 300px;">
+                        <div class="card-body">
+                            <div class="card-title text-white">
+                                ABOUT US
+                            </div>
+                            <div class="card-text text-dark">
+                                <p>
+                                    Gadrox Limited's seasoned team, with diverse corporate backgrounds,
+                                    drives our prosperity. Their competence, coupled with our dedicated staff,
+                                    secures quality products at competitive rates. Strong supplier backing provides
+                                    invaluable expertise. We aspire to expand within East Africa, offering unique
+                                    management solutions for market growth. Our philosophy emphasizes trust,
+                                    professionalism, and exceptional service, cultivating mutual growth
+                                    with our esteemed customers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col my-5">
+                    <div class="card" style="width: 300px; border:none;">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <b class="text-capitalize">our values</b>
+                            </div>
+                            <div class="card-text">
+                                RELIABILITY: Our company is committed to providing reliable and consistent supply services to our clients.
+                                QUALITY: Our team is dedicated to sourcing the best materials and supplies and delivering them to our clients.
+                                RESPONSIVENESS: We understand that our clients’ needs may change, and we work proactively to adjust our services accordingly.
+                                INTEGRITY: We believe in building long-term relationships with our clients based on mutual trust and respect.
+                                INNOVATION: We are committed to staying up-to-date with the latest trends and technologies in our industry.
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <div class="my-2 p-5" id="services">
+          <!--  <div class="margin-auto" style="width: 250px;"> -->
+               <h2 class="mx-auto" style="width: 350px;">
+                   <div>
+                       SERVICES
+                       <mark class="text-warning bg-white">OFFERED</mark>
+                   </div>
+               </h2>
+            <!-- </div>  -->
+    </div>
+
+
+    <div class="row gy-3">
+    <!-- services -->
+    {% for x in data %}
+        <div class="col-sm">
+            <div class="card h-100" style="width: 400px; display:inline-flex;">
+                <img src="{{ x.img_url }}" alt="image unavailable" class="card-img-top">
+                <div class="card-body">
+                    <div class="card-title">
+                        house is the key
+                    </div>
+                    <div class="card-text">
+                        <p>{{ x.text }}</p>
+                        <a href="#" class="btn btn-primary justify-content-center align-baseline">See profile</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+
+    <div class="my-2 p-5" id="projects">
+          <!--  <div class="margin-auto" style="width: 250px;"> -->
+               <h2 class="mx-auto" style="width: 260px;">
+                   <div>
+                       OUR
+                       <mark class="text-warning bg-white">PROJECTS</mark>
+                   </div>
+               </h2>
+            <!-- </div>  -->
+    </div>
+
+
+
+
+        <!-- our projects -->
+        <div class="row gy-3">
+
+        {% for x in projects %}
+            <div class="col-sm">
+                <div class="card h-100" style="width: 400px; display:inline-flex; border: none;">
+                    <img src="{{ x.img_url }}" alt="image unavailable" class="card-img-top">
+                    <div class="card-body">
+                        <div class="card-title">
+                            house is the key
+                        </div>
+                        <div class="card-text">
+                            <p>{{ x.text }}</p>
+                            <a href="#" class="btn btn-warning justify-content-center align-baseline">See profile</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+
+
+
+
+
+
+
+    {% comment %}
+    <div class="card d-block align-top" style="width: 400px;">
+        <img src="{% static 'pool.jpeg' %}" alt="image-unavailable" class="card-img-top" style="height: 400px;">
+        <div class="card-body">
+            <div class="card-title">
+                <h3 class="text-danger">Construction pool</h3>
+
+            </div>
+            <div class="card-text">
+                <p>This is just but a simple text to be used in development of different websites</p>
+                <a href="#" class="btn btn-primary justify-content-center">See profile</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card p-5" style="width: 400px; height: 600px;">
+        <img src="{% static 'golden.jpeg' %}" alt="image unavailable" class="card-img-top" style="height:400px;">
+        <div class="card-body">
+            <div class="card-title">
+                Golden mall
+            </div>
+            <div class="card-text">
+                <p>this mall was built by one of our associates</p>
+                <a href="#" class="btn btn-primary justify-content-center">See profile</a>
+            </div>
+
+        </div>
+    </div>
+    {% endcomment %}
+        <!--projects -->
+
+
+        <div class="container p-5 my-5" style="background-color: lightgrey; height: 600px;" id="contact">
+            <!--
+            <form method="POST" style="width: 32rem;">
+                <input type="text" class="form control">
+                <button type="submit" class="btn btn-primary float-end text-white" data-bs-target="form-control">
+                    submit
+                </button>
+            </form>
+            -->
+
+            <div class="container" style="padding-left: 3rem; margin-bottom: 1rem;">
+                Email: {{ email }}
+            </div>
+            <div class="container" style="padding-left: 3rem;">
+                phone number: {{ tel_no }}
+            </div>
+
+
+
+
+            <div class="container-expand-sm p-5 my-4" style="height:400px;">
+
+                 <!--<label for="#text_box" class="form-label">
+                    Tell us something
+                </label> -->
+                <form action="">
+                    
+                    {% csrf_token %}
+                        <div class="form-control bg-dark text-white container-expand-sm">
+                            {{ form.as_p}}
+                        </div>
+                </form>
+
+
+            </div>
+            <div class="clearfix">
+
+                    <button class="btn btn-primary btn-outline-warning text-white float-end ">
+                        submit
+                    </button>
+
+
+            </div>
+
+
+        </div>
+    <div class="clearfix">
+        <a href="#" class="text-decoration-none p-5 my-5 align-bottom float-left ">
+            <button type="button" class="btn btn-primary text-white btn-outline-warning " data-bs-target="#">
+                top
+            </button>
+        </a>
+    </div>
+
+
+</div>
+<footer class="container-fluid bg-dark text-white" style="height:120px;">
+           <div class="container-fluid my-3 p-5" style="width:350px;">
+               Copyright © 2024 UPRIM GENERAL LIMITED - All Rights Reserved.
+           </div>
+</footer>
+{% endblock %}
+</body>
+
+</html>
